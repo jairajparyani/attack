@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>PoC Test Page</h2>
+
+<script>
+fetch("https://platform-qa.dsilo.ai/data-service/api/v1/pd/62444add4786d2447b5a0c93",{
+headers:{
+"Authorization":"TOKEN"
+}
+})
+.then(r=>r.text())
+.then(d=>document.body.innerHTML=d)
+</script>
+
+</body>
+</html>
